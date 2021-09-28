@@ -1,0 +1,110 @@
+.input-group {
+    display: grid;
+    grid-row-gap: 5px;
+    position: relative;
+}
+
+input.input, .multiline {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #333;
+    padding: 16px 12px;
+    border: 1px solid #828282;
+    border-radius: 8px;
+    outline: none;
+    transition: all .3s ease;
+    max-width: 200px;
+}
+
+input.input:hover, .multiline:hover {
+    border: 1px solid #333;
+}
+
+input.input:focus, .multiline:focus {
+    border-color: #2962FF;
+}
+
+.input-label {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 12px;
+    color: #333;
+    transition: all .3s ease;
+    grid-row: 1;
+}
+
+input.input:focus ~ .input-label, .multiline:focus ~ .input-label {
+    color: #2962FF !important;
+}
+
+input.error, .multiline.error {
+    border-color: #D32F2F;
+}
+
+input.error ~ .input-label, .multiline.error ~ .input-label {
+    color: #D32F2F;
+}
+
+input.error:hover ~ .input-label, .multiline.error:hover ~ .input-label {
+    color: #333;
+}
+
+input:disabled {
+    pointer-events: none;
+    background-color: #FAFAFA;
+    border: 1px solid #E0E0E0;
+}
+
+.input-group small {
+    font-size: 10px;
+    color: #828282;
+    transition: all .3s ease;
+}
+
+input.input:focus ~ small, .multiline:focus ~ small {
+    color: #2962FF !important;
+}
+
+input.error ~ small, .multiline.error ~ small{
+    color: #D32F2F;
+}
+
+input.error:hover ~ small, .multiline.error:hover ~ small {
+    color: #333;
+}
+
+input.sm ~ span {
+    top: 44px;
+}
+
+span.start-icon, span.end-icon {
+    position: absolute;
+    top: 50px;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #828282;
+}
+
+span.end-icon {
+    left: 160px;
+}
+
+input.start-icon {
+    padding-left: 45px !important;
+}
+
+input.end-icon {
+    padding-right: 45px !important;
+}
+
+input.input.sm {
+    padding: 10px 12px;
+}
+
+input.input.full-width {
+    max-width: unset;
+}
+
+.multiline {
+    resize: none;
+}
